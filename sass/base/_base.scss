@@ -21,7 +21,7 @@ html {
 body {
   box-sizing: border-box;
   position: relative;
-  background-color: $color-black;
+  background-color: $color-white;
   min-height: 100vh;
   padding-bottom: 4rem;
 }
@@ -96,7 +96,7 @@ pre {
 
 code {
   color: $color-secondary;
-  background-color: $color-black;
+  background-color: $color-gray-light;
   border-radius: 3px;
   padding: 2px;
   margin: 0 0.2rem;
@@ -117,9 +117,9 @@ pre > code[class*='language-'] {
 }
 
 // Override Prism default background color
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: $color-black;
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: $color-gray-light;
 }
 
 a,
@@ -131,6 +131,6 @@ a:visited {
 mark,
 *::selection {
   background: $color-primary;
-  color: $color-black;
+  color: $color-white;
   line-height: 2.6rem;
 }

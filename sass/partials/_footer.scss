@@ -1,21 +1,21 @@
 .footer {
-	display: block;
-	text-align: center;
-	margin-top: 2rem;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: $footer-height;
-	background-color: $color-primary;
-	color: $color-black;
-	padding: 1rem;
-	font-family: $sans;
-	text-transform: uppercase;
-	font-size: 1.6rem;
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 1rem;
+  font-family: $sans;
+  text-transform: uppercase;
+  font-size: 1.6rem;
 
-	&__link,
-	&__link:link,
-	&__link:visited {
-		color: $color-black;
-	}
+  &__link,
+  &__link:link,
+  &__link:visited {
+    color: $color-white;
+  }
 }

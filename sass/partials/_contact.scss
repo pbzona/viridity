@@ -14,22 +14,24 @@
     width: 100%;
     padding: 1rem;
     font-family: $sans;
-    color: $color-black;
+    color: $color-white;
   }
 
   &__field {
     font-size: 1.8rem;
     transition: 0.4s all ease;
-    border-bottom: 0.4rem solid $color-black;
+    border: 0.2rem solid $color-primary;
+    border-bottom: 0.4rem solid $color-primary;
     font-weight: 400;
 
     &:focus {
-      background-color: $color-primary-light-1;
-      border-bottom: 0.4rem solid $color-primary-dark-1;
+      background-color: $color-primary-light-2;
+      border: 0.2rem solid $color-primary-light-2;
+      border-bottom: 0.4rem solid $color-primary;
     }
 
     &::placeholder {
-      color: $color-black;
+      color: $color-primary-dark-1;
     }
 
     &--email {

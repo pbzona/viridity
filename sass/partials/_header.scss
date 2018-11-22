@@ -31,7 +31,7 @@
 
     &-text {
       margin-bottom: 0.4rem;
-      color: $color-black;
+      color: $color-white;
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 6rem;
@@ -44,7 +44,7 @@
     &-desc {
       margin-top: 1rem;
       margin-bottom: 0;
-      color: $color-black;
+      color: $color-white;
       font-weight: 700;
       @include textify;
     }
@@ -52,6 +52,6 @@
 
   &__text {
     text-decoration: none;
-    color: $color-black;
+    color: $color-white;
   }
 }

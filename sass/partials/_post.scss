@@ -1,85 +1,84 @@
 .post {
-	margin: 0 auto;
-	width: 60%;
+  margin: 0 auto;
+  width: 60%;
 
-	@include respond(tablet) {
-		width: 80%;
-	}
+  @include respond(tablet) {
+    width: 80%;
+  }
 
-	@include respond(phone) {
-		width: 90%;
-	}
+  @include respond(phone) {
+    width: 90%;
+  }
 
-	&__header {
-		margin: 0 auto 2rem;
+  &__header {
+    margin: 0 auto 2rem;
 
-		text-align: center;
-		color: $color-primary;
-		letter-spacing: 2px;
-		width: 80%;
-		line-height: 4.2rem;
+    text-align: center;
+    color: $color-primary;
+    letter-spacing: 2px;
+    width: 80%;
+    line-height: 4.2rem;
 
-		&-text {
-			margin-bottom: 0;
-		}
-	}
+    &-text {
+      margin-bottom: 0;
+    }
+  }
 
-	&__meta {
-		margin-bottom: 1rem;
-		font-size: 1.4rem;
-		text-align: center;
-		color: $color-gray-light;
-		font-weight: 400;
+  &__meta {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: $color-gray;
+    font-weight: 400;
 
-		@include textify;
+    @include textify;
 
-		@include respond(phone) {
-			font-size: 1.6rem;
-		}
-	}
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
 
-	&__main {
-		width: 100%;
-	}
+  &__main {
+    width: 100%;
+  }
 
-	&__image {
-		height: 40rem;
-		background-size: cover;
-		background-position: top;
-		margin: 2rem 0;
+  &__image {
+    height: 40rem;
+    background-size: cover;
+    background-position: top;
+    margin: 2rem 0;
 
-		@include respond(tablet) {
-			height: 30rem;
-		}
-	}
+    @include respond(tablet) {
+      height: 30rem;
+    }
+  }
 
-	&__content {
-
+  &__content {
     &--no-img {
       margin-top: 4rem;
     }
   }
 
-	&__nav {
-		display: inline;
-		padding: 2rem;
-		font-size: 1.8rem;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		@include textify;
+  &__nav {
+    display: inline;
+    padding: 2rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include textify;
 
-		&--item {
-			flex-grow: 1;
-			margin: 0 .4rem 1rem;
-		}
+    &--item {
+      flex-grow: 1;
+      margin: 0 0.4rem 1rem;
+    }
 
-		&--next {
-			text-align: left;
-		}
+    &--next {
+      text-align: left;
+    }
 
-		&--prev {
-			text-align: right;
-		}
-	}
+    &--prev {
+      text-align: right;
+    }
+  }
 }
