@@ -15,10 +15,11 @@
 
   &__container {
     border-left: 0.4rem solid $color-primary;
-    padding-left: 3rem;
+    padding: 2.2rem 3rem 0.8rem;
     hyphens: auto;
     overflow-wrap: break-word;
     max-width: 100%;
+    background-color: rgba($color-primary-bg, 0.2);
 
     @include respond(tablet) {
       border-left: 0.3rem solid $color-primary;
@@ -26,7 +27,7 @@
     }
     @include respond(phone) {
       border-left: none;
-      padding-left: 0;
+      padding: 1.8rem 2.4rem 0;
     }
   }
 
@@ -39,10 +40,12 @@
   }
 
   &__excerpt {
+    color: $color-primary-dark-2;
     word-break: break-word;
   }
 
   &__title {
+    font-size: 3.6rem;
     @include respond(phone) {
       font-size: 4rem;
       line-height: 4.2rem;

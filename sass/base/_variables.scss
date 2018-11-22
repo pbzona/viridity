@@ -7,6 +7,8 @@ $color-primary-light-2: desaturate(lighten($color-primary, 25%), 8%);
 $color-primary-dark-1: saturate(darken($color-primary, 12.5%), 6%);
 $color-primary-dark-2: saturate(darken($color-primary, 19%), 10%);
 
+$color-primary-bg: #baf8cc;
+
 $color-secondary: #f6472b;
 $color-secondary-light-1: desaturate(lighten($color-secondary, 13.5%), 10%);
 $color-secondary-light-2: desaturate(lighten($color-secondary, 25%), 8%);
