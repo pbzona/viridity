@@ -5,27 +5,26 @@ body {
 h1 {
   font-family: $sans;
   font-size: 4.6rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 5.1rem;
-  text-transform: uppercase;
+  text-transform: none;
   margin: 0 0 2.3rem 0;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 
   @include respond(phone) {
     font-size: 4rem;
     line-height: 4.4rem;
-    letter-spacing: 2px;
   }
 }
 
 h2 {
   font-family: $sans;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.8rem;
   line-height: 3.2rem;
   margin: 0 0 2.3rem 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-transform: none;
   color: $color-primary;
 }
 
@@ -33,7 +32,7 @@ h3 {
   font-size: 2rem;
   font-family: $sans;
   font-weight: 400;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 1px;
   color: $color-primary;
 }
@@ -43,7 +42,7 @@ h5,
 h6 {
   font-family: $sans;
   font-style: italic;
-  text-transform: uppercase;
+  text-transform: none;
   color: $color-primary;
   font-size: 1.8rem;
 }

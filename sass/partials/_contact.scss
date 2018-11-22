@@ -50,9 +50,9 @@
   &__button {
     background-color: $color-primary;
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: none;
     transition: 0.4s all ease;
-    font-weight: 700;
+    font-weight: 500;
 
     &:focus,
     &:hover {
