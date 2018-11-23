@@ -536,7 +536,7 @@ small {
     .post-card__content a {
       text-decoration: none; }
   .post-card__excerpt {
-    color: #0c6928;
+    color: #242424;
     word-break: break-word; }
   .post-card__title {
     font-size: 3.6rem; }
@@ -759,15 +759,21 @@ small {
   margin: 0 2rem 1rem 0;
   list-style-type: none;
   border: 2px solid #20b64d;
-  padding: .6rem .8rem; }
+  padding: 0.4rem 0.8rem;
+  transition: 0.2s ease all; }
   .tag__item::before {
     content: none; }
+  .tag__item:hover {
+    cursor: pointer;
+    background-color: #20b64d; }
+    .tag__item:hover > a {
+      color: #fff; }
 
 .tag__link, .tag__link:link, .tag__link:visited {
   font-family: "Futura", "Lato", "Trebuchet MS", Arial, sans-serif;
-  text-transform: uppercase;
+  text-transform: none;
   text-decoration: none;
-  letter-spacing: 3px; }
+  letter-spacing: 2px; }
 
 @media only screen and (max-width: 37.5em) {
   .tag {

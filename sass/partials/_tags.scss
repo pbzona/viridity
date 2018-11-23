@@ -10,19 +10,29 @@
     margin: 0 2rem 1rem 0;
     list-style-type: none;
     border: 2px solid $color-primary;
-    padding: .6rem .8rem;
+    padding: 0.4rem 0.8rem;
+    transition: 0.2s ease all;
 
     &::before {
-			content: none;
-		}
+      content: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-primary;
+
+      & > a {
+        color: $color-white;
+      }
+    }
   }
   &__link,
   &__link:link,
   &__link:visited {
     font-family: $sans;
-    text-transform: uppercase;
+    text-transform: none;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 
   @include respond(phone) {
