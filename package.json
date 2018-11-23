@@ -1,6 +1,6 @@
 {
   "name": "viridity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A theme for Ghost",
   "main": "index.js",
   "scripts": {
