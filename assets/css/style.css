@@ -601,8 +601,7 @@ small {
   .header__title-desc {
     margin-top: 1rem;
     margin-bottom: 0;
-    color: #fff;
-    font-weight: 500;
+    color: #baf8cc;
     font-family: "Futura", "Lato", "Trebuchet MS", Arial, sans-serif;
     text-transform: uppercase; }
 
@@ -686,7 +685,7 @@ small {
       .pagination__next {
         margin-right: 4rem; } }
   .pagination__prev {
-    margin-left: 2rem; }
+    margin-left: 0rem; }
     @media only screen and (max-width: 37.5em) {
       .pagination__prev {
         margin-left: 4rem; } }
@@ -712,17 +711,17 @@ small {
     margin: 0 auto 1rem;
     width: 100%;
     padding: 1rem;
-    font-family: "Futura", "Lato", "Trebuchet MS", Arial, sans-serif;
-    color: #fff; }
+    font-family: "Futura", "Lato", "Trebuchet MS", Arial, sans-serif; }
   .contact-form__field {
+    color: #20b64d;
     font-size: 1.8rem;
     transition: 0.4s all ease;
     border: 0.2rem solid #20b64d;
     border-bottom: 0.4rem solid #20b64d;
     font-weight: 400; }
     .contact-form__field:focus {
-      background-color: #76df96;
-      border: 0.2rem solid #76df96;
+      background-color: #baf8cc;
+      border: 0.2rem solid #baf8cc;
       border-bottom: 0.4rem solid #20b64d; }
     .contact-form__field::placeholder {
       color: #128434; }
@@ -731,6 +730,7 @@ small {
     .contact-form__field--body:focus {
       outline: none; }
   .contact-form__button {
+    color: #fff;
     background-color: #20b64d;
     font-size: 2rem;
     text-transform: none;
