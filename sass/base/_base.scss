@@ -119,7 +119,8 @@ pre > code[class*='language-'] {
 // Override Prism default background color
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: $color-gray-light;
+  background: $color-black;
+  margin-bottom: 1.2rem;
 }
 
 a,
