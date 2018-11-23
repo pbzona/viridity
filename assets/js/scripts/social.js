@@ -18,7 +18,9 @@ function revealPlatform(platform) {
   var reference = platform.toLowerCase() + 'Username';
 
   if (window.__themeCfg[reference]) {
-    var button = document.querySelector('.social__button.' + platform.toLowerCase())
+    var button = document.querySelector(
+      '.social__button.' + platform.toLowerCase()
+    );
     button.classList.remove('hidden');
 
     button.setAttribute(
@@ -34,7 +36,7 @@ function revealSocialLinks() {
   revealPlatform('Instagram');
   revealPlatform('LinkedIn');
   revealPlatform('Github');
-};
+}
 
 revealSocialLinks();
 
@@ -47,3 +49,10 @@ function hideSocialButtons() {
 }
 
 hideSocialButtons();
+
+var social = {
+  revealSocialLinks: revealSocialLinks,
+  hideSocialButtons: hideSocialButtons
+};
+
+module.exports = social;
