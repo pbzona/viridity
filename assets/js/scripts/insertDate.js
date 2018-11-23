@@ -3,6 +3,6 @@ function insertDate() {
   var currentYear = new Date().getFullYear();
 
   dateContainer.innerText = currentYear;
-};
+}
 
 module.exports = insertDate;

@@ -1,15 +1,14 @@
-var form = document.getElementById('contact-form')
+var form = document.getElementById('contact-form');
 form.addEventListener('submit', sendDataToLambda);
 
 var response = document.getElementById('response');
 var contactPageContent = document.getElementById('contact-page-content');
 
-if (!window.__peepCfg.contactForm) {
+if (!window.__vCfg.contactForm) {
   form.style.display = 'none';
   document.querySelector('.contact-form').style.padding = '0';
   document.querySelector('.response-handler').style.height = '0';
   contactPageContent.style.display = 'block';
-
 }
 
 function sendDataToLambda(e) {
@@ -19,13 +18,13 @@ function sendDataToLambda(e) {
   var formSubject = `New message from ${window.location.hostname}`;
   var formMessage = document.getElementById('form-body').value;
 
-  var endpoint = window.__peepCfg.contactForm;
+  var endpoint = window.__vCfg.contactForm;
 
   var body = {
     email: formEmail,
     subject: formSubject,
     message: formMessage
-  }
+  };
 
   var lambdaRequest = new Request(endpoint, {
     method: 'POST',
@@ -35,10 +34,14 @@ function sendDataToLambda(e) {
 
   fetch(lambdaRequest)
     .then(data => {
-      response.innerText = window.__peepCfg.contactSuccess ? window.__peepCfg.contactSuccess : `Thanks for your message, I'll get back to you as soon as possible`;
+      response.innerText = window.__vCfg.contactSuccess
+        ? window.__vCfg.contactSuccess
+        : `Thanks for your message, I'll get back to you as soon as possible`;
     })
     .catch(err => {
-      response.innerText = window.__peepCfg.contactError ? window.__peepCfg.contactError :`Something went wrong, please try again`;
+      response.innerText = window.__vCfg.contactError
+        ? window.__vCfg.contactError
+        : `Something went wrong, please try again`;
     });
 
   document.getElementById('contact-form').reset();

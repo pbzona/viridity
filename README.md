@@ -1,41 +1,37 @@
-# Peep
+# Viridity
 
-Peep is a mobile-responsive theme for [Ghost](https://ghost.org), influenced by the things I wanted on my own blog but couldn't find in other themes. Most of the structure is built on top of my minimal [Sprout theme](https://github.com/pbzona/sprout).
+Viridity is a fork of the [Peep theme] for Ghost, using a lighter, more minimal style, but otherwise many of the same design elements. Viridity is mobile friendly, and is customizable from within the Ghost admin. I'll be developing it somewhat separately from Ghost, but if one gets a new feature that I really like, I'll go ahead and add it to the other. For now, Viridity is Peep's light themed cousin.
 
-![Peep desktop view](https://s3.amazonaws.com/peepthemesamples/peep-desktop.png)
+![Viridity desktop view](https://s3.amazonaws.com/peepthemesamples/viridity-desktop.png)
 
 ## Installation
 
-To install Peep on your own Ghost blog, clone the repository and upload it to the `<your ghost installation>/content/themes` directory on your server. Alternatively, you can upload the zip file via the Ghost admin panel for your site.
+To install Viridity on your own Ghost blog, clone the repository and upload it to the `<your ghost installation>/content/themes` directory on your server. Alternatively, you can upload the zip file via the Ghost admin panel for your site.
 
 ## Configuration
 
-Peep adheres to the [Ghost Theme Configuration Approach](https://github.com/unwitting/gtca), and contains a separate configuration object for options that fall outside the GTCA spec. GTCA defines a list of supported configuration properties in their project, but I've used their method to integrate a contact form into the theme via the `__peepCfg` configuration object as well. Future configuration options will be added via both of these methods, depending on their scope.
+Viridity adheres to the [Ghost Theme Configuration Approach](https://github.com/unwitting/gtca), and contains a separate configuration object for options that fall outside the GTCA spec. GTCA defines a list of supported configuration properties in their project, but I've used their method to integrate a contact form into the theme via the `__vCfg` configuration object as well. Future configuration options will be added via both of these methods, depending on their scope.
 
 ### Contact Form
 
-The Peep contact form is powered by AWS Lambda, and it is optional. To add it, follow the steps [here](https://linuxacademy.com/blog/aws/how-to-build-a-serverless-contact-form-on-aws/) to create a serverless contact form, and add the following to the **Blog Header** section in your Ghost admin (under **Code injection**):
+The Viridity contact form is powered by AWS Lambda, and it is optional. To add it, follow the steps [here](https://linuxacademy.com/blog/aws/how-to-build-a-serverless-contact-form-on-aws/) to create a serverless contact form, and add the following to the **Blog Header** section in your Ghost admin (under **Code injection**):
 
 ```
-<script>window.__peepCfg.contactForm = 'your API Gateway endpoint';</script>
+<script>window.__vCfg.contactForm = 'your API Gateway endpoint';</script>
 ```
 
-Here's what it looks like on the site:
-
-![Peep contact form](https://s3.amazonaws.com/peepthemesamples/peep-contact.png)
-
-The contact form is a static page that you can enable by creating a post with the slug `/contact` and setting it as a _page_. If you don't want to use it, simply do not set the `window.__peepCfg.contactForm` script in your header and the page will display your content normally.
+The contact form is a static page that you can enable by creating a post with the slug `/contact` and setting it as a _page_. If you don't want to use it, simply do not set the `window.__vCfg.contactForm` script in your header and the page will display your content normally.
 
 A confirmation message will be displayed below the contact form when the message is successfully sent (or if it isn't, an error will be shown). You can set custom messages for these by adding the following to your **Blog Header** in the Ghost admin:
 
 ```
-<script>window.__peepCfg.contactSuccess = 'Your custom success message';</script>
-<script>window.__peepCfg.contactError = 'Your custom error message';</script>
+<script>window.__vCfg.contactSuccess = 'Your custom success message';</script>
+<script>window.__vCfg.contactError = 'Your custom error message';</script>
 ```
 
 ### Comments
 
-Peep also supports comments via Disqus. To add comments to your site, add the following into the **Blog Header** section in your Ghost admin:
+Viridity also supports comments via Disqus. To add comments to your site, add the following into the **Blog Header** section in your Ghost admin:
 
     <script>window.__themeCfg.disqusUsername = 'your Disqus site shortname'</script>
 
@@ -43,7 +39,7 @@ Make sure to replace the value with your own Disqus shortname!
 
 ### Social Media Buttons
 
-The Peep theme comes with six social media and sharing buttons:
+The Viridity theme comes with six social media and sharing buttons:
 
 - Facebook
 - Github
@@ -70,13 +66,13 @@ Want to add a social profile that's not included by default? Adding new buttons 
 
 Not everyone uses social media or wants to share their account info - if you want to disable this section altogether, add the following into the code injection section within your Ghost admin:
 
-    <script>window.__peepCfg.socialButtonsEnabled = false</script>
+    <script>window.__vCfg.socialButtonsEnabled = false</script>
 
 When this setting is present (and set to false), the social buttons and RSS feed link will not be displayed on your site. If you have usernames already set in your code injection, this setting will override them. If you want to temporarily disable your social links, for example, you can add this line without deleting your social configuration.
 
 ### Color Scheme
 
-While the color scheme is not configurable via the admin panel, I have added what I think is a fairly simple way to change the color palette across the theme with just one or two changes. If you're not fan of the yellow on black, you can modify the primary color by going to `sass/base/_variables.scss` and changing the `$color-primary` and `$color-secondary` values to whatever you want. When you're done, be sure to compile the SASS by running `npm run sass:build` from the root of the theme directory.
+While the color scheme is not configurable via the admin panel, I have added what I think is a fairly simple way to change the color palette across the theme with just one or two changes. If you're not fan of the green on white, you can modify the primary color by going to `sass/base/_variables.scss` and changing the `$color-primary` and `$color-secondary` values to whatever you want. When you're done, be sure to compile the SASS by running `npm run sass:build` from the root of the theme directory.
 
 ## Code Highlighting
 
@@ -115,17 +111,17 @@ Languages supported by this theme (with name to use after initial backticks):
 
 I'm open to adding more as I have a need, but feel free to either change them up in your own version by downloading Prism with additional language selections, or make a PR.
 
-Prism snippets also include a "copy-to-clipboard" feature, where if you hover on a code snippet, a copy button appears to its right. This button can be styled in the `_copy.scss` partial if you decide to use it.
+Prism snippets also include a "copy-to-clipboard" feature, where if you hover on a code snippet, a copy button appears to its right. This button can be styled in the `_prism.scss` partial if you decide to use it.
 
 If you want to cut down the bundle size, which is currently about 30kB, you can also download your own selection from the [PrismJS site](https://prismjs.com/download.html), choose only the ones you need, and replace the respective files in `assets/`.
 
 ## Development
 
-I run my sites on Ghost because the theme system is just insanely fun to work with. If you want to mess with my theme (or create your own), I recommend starting [here](https://docs.ghost.org/docs/install-local). Peep is compatible with Ghost v1.19, and has been tested up to Ghost v1.25, so be sure to upgrade your local installation before running it.
+I run my sites on Ghost because the theme system is just insanely fun to work with. If you want to mess with my theme (or create your own), I recommend starting [here](https://docs.ghost.org/docs/install-local). Viridity is compatible with Ghost v1.19, and has been tested up to Ghost v1.25, so be sure to upgrade your local installation before running it.
 
 ### Styles
 
-Peep uses SCSS within the `sass/` directory, which gets compiled into a `style.css` file within `assets/css/`.
+Viridity uses SCSS within the `sass/` directory, which gets compiled into a `style.css` file within `assets/css/`.
 
 To run a development mode that watches for changes, compiles them, and applies them to your site in real time, run `npm run sass:watch`. If you make changes you want to keep, you can build a production ready stylesheet (compiled, prefixed, minified) by running `npm run css:build`.
 
