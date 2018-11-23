@@ -38,8 +38,6 @@ function revealSocialLinks() {
   revealPlatform('Github');
 }
 
-revealSocialLinks();
-
 // Option to remove social display altogether
 function hideSocialButtons() {
   if (window.__vCfg.socialButtonsEnabled == false) {
@@ -48,11 +46,9 @@ function hideSocialButtons() {
   }
 }
 
-hideSocialButtons();
-
-var social = {
-  revealSocialLinks: revealSocialLinks,
-  hideSocialButtons: hideSocialButtons
-};
+function social() {
+  revealSocialLinks();
+  hideSocialButtons();
+}
 
 module.exports = social;
