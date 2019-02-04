@@ -532,6 +532,8 @@ small {
       .post-card__container {
         border-left: none;
         padding: 1.8rem 2.4rem 0; } }
+  .post-card__meta {
+    color: #20b64d; }
   .post-card__content {
     display: inline; }
     .post-card__content a {
