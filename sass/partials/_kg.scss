@@ -1,0 +1,40 @@
+// TODO - Refactor the rest of the site to properly apply differences on these images
+
+// Card image widths for migration to v2.0
+.kg-width-wide {
+  width: 100%;
+}
+
+.kg-width-full {
+  width: 100%;
+}
+
+// Gallery image widths for migration to v2.0
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em auto;
+  max-width: 1040px;
+  width: 100vw;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 0.75em;
+}

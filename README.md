@@ -1,6 +1,6 @@
 # Viridity
 
-Viridity is a fork of the [Peep theme] for Ghost, using a lighter, more minimal style, but otherwise many of the same design elements. Viridity is mobile friendly, and is customizable from within the Ghost admin. I'll be developing it somewhat separately from Ghost, but if one gets a new feature that I really like, I'll go ahead and add it to the other. For now, Viridity is Peep's light themed cousin.
+Viridity is a fork of the [Peep theme](https://github.com/pbzona/peep) for Ghost, using a lighter, more minimal style, but otherwise many of the same design elements. Viridity is mobile friendly, and is customizable from within the Ghost admin. I'll be developing it somewhat separately from Ghost, but if one gets a new feature that I really like, I'll go ahead and add it to the other. For now, Viridity is Peep's light themed cousin.
 
 ![Viridity desktop view](https://s3.amazonaws.com/peepthemesamples/viridity-desktop.png)
 
@@ -117,7 +117,7 @@ If you want to cut down the bundle size, which is currently about 30kB, you can 
 
 ## Development
 
-I run my sites on Ghost because the theme system is just insanely fun to work with. If you want to mess with my theme (or create your own), I recommend starting [here](https://docs.ghost.org/docs/install-local). Viridity is compatible with Ghost v1.19, and has been tested up to Ghost v1.25, so be sure to upgrade your local installation before running it.
+I run my sites on Ghost because the theme system is just insanely fun to work with. If you want to mess with my theme (or create your own), I recommend starting [here](https://docs.ghost.org/docs/install-local). Viridity is compatible with Ghost v1.25, and will work with Ghost 2.x. Note that not all König image features are supported yet, but I'm working on that 😎.
 
 ### Styles
 
