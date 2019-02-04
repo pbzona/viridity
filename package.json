@@ -17,6 +17,11 @@
     "name": "Phil Zona",
     "email": "phil.b.zona@gmail.com"
   },
+  "keywords": [
+    "sass",
+    "browserify",
+    "ghost-theme"
+  ],
   "license": "ISC",
   "devDependencies": {
     "browserify": "^16.2.0",
